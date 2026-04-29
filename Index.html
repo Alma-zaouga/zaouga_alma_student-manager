@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar">
+  <div class="logo">🎓 Student Manager</div>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Students</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+  <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <h2>Manage Your Students 💻</h2>
+  <p>Ajouter, modifier, supprimer et rechercher facilement</p>
+</section>
+
+<div class="container">
+
+  <!-- ========== ALERT ========== -->
+  <div id="alert-box" class="alert-box" role="alert"></div>
+
+  <!-- ========== STATS ========== -->
+  <div class="stats-bar">
+    <div class="stat-card">
+      <span class="stat-icon">👥</span>
+      <div>
+        <div class="stat-value" id="stat-total">0</div>
+        <div class="stat-label">Étudiants</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-icon">🎓</span>
+      <div>
+        <div class="stat-value" id="stat-levels">0</div>
+        <div class="stat-label">Niveaux</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-icon">🔍</span>
+      <div>
+        <div class="stat-value" id="stat-filtered">0</div>
+        <div class="stat-label">Affichés</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== SEARCH & SORT ========== -->
+  <div class="controls">
+    <input type="text" id="search" placeholder="🔍 Rechercher par nom, prénom ou email..." aria-label="Rechercher">
+    <select id="sort" aria-label="Trier">
+      <option value="">— Trier par —</option>
+      <option value="name">Prénom (A→Z)</option>
+      <option value="last_name">Nom (A→Z)</option>
+      <option value="class">Niveau (A→Z)</option>
+    </select>
+    <button id="export-btn" class="btn-export" title="Exporter en CSV">📥 Export CSV</button>
+  </div>
+
+  <!-- ========== FORM ========== -->
+  <form id="student-form" novalidate>
+    <h3 class="form-title" id="form-title">➕ Ajouter un étudiant</h3>
+    <div class="form-grid">
+      <div class="field">
+        <label for="Nom">Nom *</label>
+        <input type="text" id="Nom" placeholder="Nom de famille" required autocomplete="family-name">
+      </div>
+      <div class="field">
+        <label for="Prenom">Prénom *</label>
+        <input type="text" id="Prenom" placeholder="Prénom" required autocomplete="given-name">
+      </div>
+      <div class="field">
+        <label for="DateNaissance">Date de naissance *</label>
+        <input type="date" id="DateNaissance" required>
+      </div>
+      <div class="field">
+        <label for="Niveau">Niveau *</label>
+        <input type="text" id="Niveau" placeholder="Ex: Licence 2, PI2..." required>
+      </div>
+      <div class="field field-full">
+        <label for="Email">Email *</label>
+        <input type="email" id="Email" placeholder="email@exemple.com" required autocomplete="email">
+      </div>
+    </div>
+    <div class="form-actions">
+      <button type="submit" id="submit-btn">➕ Ajouter</button>
+      <button type="button" id="cancel-btn" class="btn-cancel" style="display:none;">✖ Annuler</button>
+    </div>
+  </form>
+
+  <!-- ========== TABLE ========== -->
+  <div class="table-wrapper">
+    <table aria-label="Liste des étudiants">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Date de naissance</th>
+          <th>Email</th>
+          <th>Niveau</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="student-list"></tbody>
+    </table>
+    <div id="empty-state" class="empty-state" style="display:none;">
+      <p>📭 Aucun étudiant trouvé</p>
+      <small>Ajoutez votre premier étudiant via le formulaire ci-dessus.</small>
+    </div>
+  </div>
+
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <p>© 2026 Student Manager — Zaouga Alma | Made with ❤️</p>
+</footer>
+
+<script src="js.js"></script>
+</body>
+</html>
