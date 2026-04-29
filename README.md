@@ -134,4 +134,10 @@ git clone https://github.com/[votre-username]/zaouga_alma_student-manager.git
 - Préférence sauvegardée dans localStorage
 - Thème appliqué automatiquement au rechargement
 
+## Recherche et Tri
+- Recherche en temps réel par nom, prénom, email ou niveau
+- Tri alphabétique par nom, prénom ou niveau
+- Compteur d'étudiants mis à jour automatiquement
+- 
+
 *© 2026 — Zaouga Alma | PI2*
