@@ -138,6 +138,10 @@ git clone https://github.com/[votre-username]/zaouga_alma_student-manager.git
 - Recherche en temps réel par nom, prénom, email ou niveau
 - Tri alphabétique par nom, prénom ou niveau
 - Compteur d'étudiants mis à jour automatiquement
-- 
+
+## Export et Statistiques
+- Export CSV avec encodage UTF-8 (accents corrects dans Excel)
+- Barre de statistiques : total étudiants, niveaux distincts, résultats affichés
+- Protection XSS avec échappement HTML
 
 *© 2026 — Zaouga Alma | PI2*
