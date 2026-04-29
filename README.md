@@ -123,5 +123,9 @@ git clone https://github.com/[votre-username]/zaouga_alma_student-manager.git
 ```
 
 ---
+## Validation des données
+- Validation email avec regex
+- Vérification email dupliqué
+- Tous les champs sont obligatoires
 
 *© 2026 — Zaouga Alma | PI2*
