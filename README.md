@@ -128,4 +128,10 @@ git clone https://github.com/[votre-username]/zaouga_alma_student-manager.git
 - Vérification email dupliqué
 - Tous les champs sont obligatoires
 
+- 
+## Dark Mode
+- Bouton bascule clair/sombre
+- Préférence sauvegardée dans localStorage
+- Thème appliqué automatiquement au rechargement
+
 *© 2026 — Zaouga Alma | PI2*
